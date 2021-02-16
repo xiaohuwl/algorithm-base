@@ -4,22 +4,23 @@ package com.xiaohuxiong.datastructure.node;
  * 单向列表结构
  */
 public class SingleNode {
-   private String value;
+   private int hash;
    private SingleNode next;
 
     public SingleNode() {
     }
 
-    public SingleNode(String value) {
-        this.value = value;
+    public SingleNode(int hash,SingleNode next) {
+        this.hash = hash;
+        this.next = next;
     }
 
-    public String getValue() {
-        return value;
+    public int getHash() {
+        return hash;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setHash(int hash) {
+        this.hash = hash;
     }
 
     public SingleNode getNext() {

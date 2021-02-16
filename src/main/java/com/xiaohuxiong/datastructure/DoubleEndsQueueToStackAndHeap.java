@@ -25,7 +25,7 @@ public class DoubleEndsQueueToStackAndHeap<T> {
         }else {
             cur.setNext(head);
             tail.setNext(cur);
-            head.setPre(cur);
+            head.setPrev(cur);
         }
     }
 
@@ -43,11 +43,11 @@ public class DoubleEndsQueueToStackAndHeap<T> {
             tail = null;
             head = null;
         }else {
-            tail = node.getPre();
-            head.setPre(tail);
+            tail = node.getPrev();
+            head.setPrev(tail);
             tail.setNext(head);
         }
-        return node.getValue();
+        return node.getElement();
     }
 
 
@@ -67,9 +67,9 @@ public class DoubleEndsQueueToStackAndHeap<T> {
         }else {
             tail.setNext(node);
             head=node.getNext();
-            head.setPre(tail);
+            head.setPrev(tail);
         }
-        return node.getValue();
+        return node.getElement();
     }
 
     /**
@@ -82,7 +82,7 @@ public class DoubleEndsQueueToStackAndHeap<T> {
             tail=cur;
             head=cur;
         }else{
-            cur.setPre(tail);
+            cur.setPrev(tail);
             cur.setNext(head);
             tail=cur;
         }

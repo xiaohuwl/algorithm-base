@@ -1,24 +1,28 @@
 package com.xiaohuxiong.datastructure.node;
 
-public class DoubleNode<T> {
+import java.util.LinkedList;
 
-    private T value;
+public class DoubleNode<E> {
+
+    private E element;
     private DoubleNode next;
-    private DoubleNode pre;
+    private DoubleNode prev;
 
     public DoubleNode() {
     }
 
-    public DoubleNode(T value) {
-        this.value = value;
+    public DoubleNode(DoubleNode<E> prev, E element, DoubleNode<E> next) {
+        this.element = element;
+        this.next = next;
+        this.prev = prev;
     }
 
-    public T getValue() {
-        return value;
+    public E getElement() {
+        return element;
     }
 
-    public void setValue(T value) {
-        this.value = value;
+    public void setElement(E element) {
+        this.element = element;
     }
 
     public DoubleNode getNext() {
@@ -29,11 +33,11 @@ public class DoubleNode<T> {
         this.next = next;
     }
 
-    public DoubleNode getPre() {
-        return pre;
+    public DoubleNode getPrev() {
+        return prev;
     }
 
-    public void setPre(DoubleNode pre) {
-        this.pre = pre;
+    public void setPrev(DoubleNode prev) {
+        this.prev = prev;
     }
 }
