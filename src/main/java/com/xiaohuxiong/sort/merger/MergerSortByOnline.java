@@ -1,4 +1,4 @@
-package com.xiaohuxiong.sort;
+package com.xiaohuxiong.sort.merger;
 
 public class MergerSortByOnline {
 

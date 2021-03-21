@@ -1,4 +1,4 @@
-package com.xiaohuxiong.sort;
+package com.xiaohuxiong.sort.merger;
 
 import java.util.ArrayList;
 import java.util.List;
